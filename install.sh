@@ -1,6 +1,6 @@
 #!/usr/bin/bash
-
-
+#
+#
 ##############################################################
 #   	      _               _              _		     #
 #   	  ___| |__   ___  ___| | ___ __ __ _/ |_ __	     #
@@ -16,9 +16,9 @@
 # Debian based distros can just add the checkra1n repo and install the app directly on their system through apt
 # However, at the time of this script was written the repo could not be added to the system due to some errors
 # This will be updated when the Checkra1n team has fixed this issue
-# In the mean time, you should just download the Checkra1n manually or use this script for the ease of installation if you're running a Debian based linux distribution
+# In the mean time, you should just download the Checkra1n manually or automate the install with this script if you're running a Debian based linux distribution
 #
-#
+
 echo "Script is starting..." && sleep 2
 
 
