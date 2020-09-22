@@ -13,7 +13,7 @@ sudo apt install checkra1n
 ```
 
 ## Other Linux Distribution
-On other linux distribution, you can download the CLI version of Checkra1n from their website. But, it can be quite cumbersome because it only comes with a single executable file. So for the ease of installation, you can just use the install script
+You can download the CLI version of Checkra1n from their website manually. But it can be quite cumbersome. So for the ease of installation, you can just use the install script
 ```
 sh install.sh
 ```
