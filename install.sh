@@ -33,6 +33,7 @@ chmod +x ./checkra1n && sleep 1
 # If you don't know your username, you can check it on your prompt (usually the one on the very left)
 echo 'You will need to input your username in order to proceed' && sleep 0.75
 echo 'Not to worry, your data is safe' && sleep 0.75
+# Username input function
 userin(){
     echo -n 'Please enter your username: '
     read name
