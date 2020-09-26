@@ -19,6 +19,7 @@
 # In the mean time, you should just download the Checkra1n manually or automate the install with this script if you're running a Debian based linux distribution
 #
 
+
 echo "Getting things ready..." && sleep 2
 
 
