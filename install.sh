@@ -19,13 +19,19 @@
 # In the mean time, you should just download the Checkra1n manually or automate the install with this script if you're running a Debian based linux distribution
 #
 
-echo "Script is starting..." && sleep 2
+echo "Getting things ready..." && sleep 2
 
 
 # Downloading the actual Checkra1n file directly from their website
-echo 'Fetching the Checkra1n file from checkra.in' && sleep 0.5
-wget https://assets.checkra.in/downloads/linux/cli/x86_64/fa08102ba978746ff38fc4c1a0d2e8f231c2cbf79c7ef6d7b504e4683a5b7d05/checkra1n
-chmod +x ./checkra1n && sleep 1
+FILE=checkra1n
+if [ ! -f "$FILE" ]; then
+    echo "Fething Files"
+    wget https://assets.checkra.in/downloads/linux/cli/x86_64/fa08102ba978746ff38fc4c1a0d2e8f231c2cbf79c7ef6d7b504e4683a5b7d05/checkra1n
+    chmod +x ./checkra1n && sleep 1
+else 
+    echo "checkra1n file already exist" && sleep 0.75
+    echo "Proceeding with the installation" && sleep 0.75
+fi
 
 
 # Inputting the username
@@ -42,11 +48,12 @@ userin(){
     read response
     if [[ "$response" =~ ^[Yy] ]]; then
         echo "Alright working on it"
-    fi
-    if [[ "$response" =~ ^[Nn] ]]; then
-        echo "Please try again"
-        sleep 0.5
+    elif [[ "$response" =~ ^[Nn] ]]; then
+        echo "Please try again" && sleep 0.5
         userin
+    else echo "Invalid input!"
+        echo "Installation Aborted"
+        exit
     fi
 }
 userin
